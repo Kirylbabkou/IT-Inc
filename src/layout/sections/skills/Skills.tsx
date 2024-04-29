@@ -18,13 +18,6 @@ export const Skills = () => {
                             <Skill iconId={'css'} title={"CSS3"}/>
                             <Skill iconId={'js'} title={"JavaScript"}/>
                             <Skill iconId={'bootstrap'} title={"Bootstrap"}/>
-
-                    {/*<ul>*/}
-                    {/*    <li><img src="" alt=""/><span>HTML 5</span></li>*/}
-                    {/*    <li><img src="" alt=""/><span>CSS3</span></li>*/}
-                    {/*    <li><img src="" alt=""/><span>JavaScript</span></li>*/}
-                    {/*    <li><img src="" alt=""/><span>Bootstrap</span></li>*/}
-                    {/*</ul>*/}
                         </SkillsWrapper>
                 </div>
                 <Photo src={skills} alt="Skills"/>
@@ -33,8 +26,10 @@ export const Skills = () => {
     );
 };
 
-const StyledSkills = styled.div`
-min-height: 450px;`
+const StyledSkills = styled.section`
+    min-height: 450px;
+    background: #F7F6FB;
+`
 
 const Photo = styled.img`
     width: 344px;

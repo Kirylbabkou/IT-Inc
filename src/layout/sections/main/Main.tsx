@@ -2,10 +2,10 @@ import React from 'react';
 import styled from "styled-components";
 import photo from '../../../assets/img/photo.webp'
 import {FlexWrapper} from "../../../components/FlexWrapper";
+import {Button} from "../../../components/Button";
 
 export const Main = () => {
     return (
-        <>
         <StyledMain>
             <FlexWrapper alignItems="center" justifyContent="space-around">
                 <div>
@@ -13,23 +13,21 @@ export const Main = () => {
                     <MainTitle>Software Developer</MainTitle>
                     <MainSpan>I’m John Doe, a developer dedicated to making the world a better place one line of code at a time.</MainSpan>
                     <div>
-                        <button>Hire me</button>
+                        <Button>Hire me</Button>
                     </div>
-
                 </div>
                     <Photo src={photo} alt=""/>
-
-
             </FlexWrapper>
-
-
         </StyledMain>
-        </>
     );
 };
 
-const StyledMain = styled.div`
-min-height: 500px;`
+const StyledMain = styled.section`
+min-height: 500px;
+    background: #F7F6FB;
+    color: #343D68;
+
+`
 
 const Photo = styled.img`
     width: 344px;

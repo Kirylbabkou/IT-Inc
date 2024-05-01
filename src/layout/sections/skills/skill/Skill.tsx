@@ -5,7 +5,6 @@ import styled from "styled-components";
 type SkillPropsType = {
     iconId: string
     title: string
-
 }
 
 export const Skill = (props: SkillPropsType) => {

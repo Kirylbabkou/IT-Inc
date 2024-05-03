@@ -5,7 +5,7 @@ import { SectionTitle } from '../../../components/SectionTitle';
 import { Skill } from './skill/Skill';
 import skills from "../../../assets/img/skills.webp";
 import {Icon} from "../../../components/icon/Icon";
-import ring from "../../../assets/img/ring.svg";
+import ring from "../../../assets/img/fotoDecor/ring.svg";
 
 export const Skills = () => {
     return (

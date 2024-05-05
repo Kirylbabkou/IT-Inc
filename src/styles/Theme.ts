@@ -5,6 +5,7 @@ export const theme = {
         secondary: '#343D68',
         accent: '#E84949',
         light: '#FFFFFF',
+        lightOpacity: 'rgba(255, 255, 255, 0.87)',
         secondaryFont: '#818080'
 
     }

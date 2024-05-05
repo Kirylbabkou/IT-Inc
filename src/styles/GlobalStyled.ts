@@ -1,5 +1,7 @@
 import {createGlobalStyle} from "styled-components";
 import {theme} from "./Theme";
+import {SectionTitle} from "../components/SectionTitle";
+
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -18,10 +20,12 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         background-color: ${theme.colors.primaryBg};
+        line-height: 1.2 ;
     }
     
     a {
         text-decoration: none;
+        //color: ${theme.colors.light}
     }
     
     ul {
@@ -29,7 +33,23 @@ export const GlobalStyle = createGlobalStyle`
     }
     
     button {
-        border: none;
+        //border: none;
         background-color: unset;
+        cursor: pointer;
+        color: ${theme.colors.light}
     }
+    
+    span {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    
+    section:nth-of-type(even) h2 {
+        color: ${theme.colors.accent} ;
+        margin-bottom: 30px;
+    }
+    section:nth-of-type(odd) h2 {
+        margin-top: 30px;
+    }
+    
 `

@@ -8,7 +8,7 @@ import {theme} from "../../../styles/Theme";
 import {Icon} from "../../../components/icon/Icon";
 
 
-export const Main = () => {
+export const Main2 = () => {
     return (
         <StyledMain>
             <Container>
@@ -23,10 +23,10 @@ export const Main = () => {
                     </BlockInfo>
                     <PhotoWrapper>
                         {/*<span>*/}
-                            <Icon id={'ring'} width="22" height="22" viewBox="0 0 22 22" iconId={"ring"}/>
+                        <Icon id={'ring'} width="22" height="22" viewBox="0 0 22 22" iconId={"ring"}/>
                         {/*<span id={'ring'}><Icon width="22" height="22"                                                 viewBox="0 0 22 22" iconId={"ring"}/></span>*/}
                         <Icon id={'zigzag'} width="38" height="98" viewBox="0 0 43 98" iconId={"zigzag"}/>
-                       <Icon id={'plus'} width="27" height="27" viewBox="0 0 27 27" iconId={"plus"}/>
+                        <Icon id={'plus'} width="27" height="27" viewBox="0 0 27 27" iconId={"plus"}/>
                         <Icon id={'cube'} width="40" height="40" viewBox="0 0 40 40" iconId={"cube"}/>
                         <Icon id={'circles'} width="120" height="76" viewBox="0 0 120 76" iconId={"circles"}/>
                         {/*</span>*/}
@@ -47,40 +47,40 @@ min-height: 495px;
 `
 
 const PhotoWrapper = styled.div`
-//height: 100%;    
-
-    //span {        
-    //    z-index: 10;
-    //}
+  position: relative;
+    width: 384px;
+    height: 420px;
+    z-index: -1;
+    
     #ring {
-        z-index: 10;
-        position: relative;
-        top: 26px;
-        left: 224px; 
+        z-index: 1;
+        position: absolute;
+        bottom: 0;
+        left: 20px; 
     }
     #zigzag {
-        z-index: 10;
-        position: relative;
-        bottom: 320px;
-        left: 184px;
+        z-index: 1;
+        position: absolute;
+        top: -20px;
+        left: 0;
     }
     #plus {
-        z-index: 10;
-        position: relative;
-        bottom: 410px;
-        left: 276px;
+        z-index: 1;
+        position: absolute;
+        top: -38px;
+        left: 156px;
     }
     #cube {
-        z-index: 10;
-        position: relative;
-        bottom: 400px;
-        left: 486px;
+        z-index: 1;
+        position: absolute;
+        top: -38px;
+        right: -30px;
     }    
     #circles {
-        z-index: 10;
-        position: relative;
-        top: 60px;
-        left: 364px;
+        z-index: 1;
+        position: absolute;
+        bottom: -34px;
+        left: 284px;
     }
 `
 
@@ -88,9 +88,10 @@ const Photo = styled.img`
     width: 344px;
     height: 389px;
     object-fit: cover;
-    position: relative;
-    margin: 50px 20px 0 0;
-    
+    position: absolute;
+    bottom: 26px;
+    right: 0;
+    z-index: 0;   
 `
 const BlockInfo = styled.div`
 max-width: 46%;
@@ -99,12 +100,12 @@ max-width: 46%;
 const MainTitle = styled.h1`
     font-size: 48px;
     font-weight: 600;
-    //line-height: 58px;    
+    //line-height: 58px;
     text-align: left;
     margin-bottom: 24px;
 `
-const MainSpan = styled.span`
-   // color: ${theme.colors.secondaryFont};
+const MainSpan = styled.span`  
+    // color: ${theme.colors.secondaryFont};
     color: rgba(0,0,0,0.7)
 `
 const MainSpanTitle = styled.span`

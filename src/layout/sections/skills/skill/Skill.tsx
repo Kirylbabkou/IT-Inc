@@ -3,14 +3,16 @@ import {Icon} from "../../../../components/icon/Icon";
 import styled from "styled-components";
 
 type SkillPropsType = {
+    width?: string
     iconId: string
     title: string
+    viewBox?: string
 }
 
 export const Skill = (props: SkillPropsType) => {
     return (
         <StyledSkill>
-            <Icon width={"44px"} viewBox={'0 0 44 44'} height={"44px"} iconId={props.iconId} />
+            <Icon width={props.width || "44px"} viewBox={props.width ||'0 0 44 44'} height={"44px"} iconId={props.iconId} />
             <SkillTitle>{props.title}</SkillTitle>
         </StyledSkill>
     );

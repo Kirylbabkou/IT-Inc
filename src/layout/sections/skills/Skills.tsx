@@ -6,32 +6,33 @@ import { Skill } from './skill/Skill';
 import skills from "../../../assets/img/skills.webp";
 import {Icon} from "../../../components/icon/Icon";
 import ring from "../../../assets/img/fotoDecor/ring.svg";
+import {Container} from "../../../components/Container";
+import {theme} from "../../../styles/Theme"
 
 export const Skills = () => {
     return (
         <StyledSkills>
-
-
-            <SectionTitle>Skills</SectionTitle>
-            <FlexWrapper wrap="wrap" alignItems="center" justifyContent="space-around">
-                <div style={{
-                    backgroundImage: 'red',
-                }}>
-                    <p>I have a vast experience in the following web technologies:</p>
+            <Container style={{ background: `${theme.colors.light}` }}>
+                <SectionTitle>Skills</SectionTitle>
+                <FlexWrapper wrap="wrap" alignItems="center" justifyContent="space-between">
+                    <div>
+                        <SkillsText>I have a vast experience in the following web technologies:</SkillsText>
                         <SkillsWrapper>
-                            <Skill iconId={'html'} title={"HTML 5"}/>
-                            <Skill iconId={'css'} title={"CSS3"}/>
+                            <Skill  iconId={'html'} title={"HTML 5"}/>
+                            <Skill width={'44px'} viewBox={'0 0 44 44'} iconId={'css'} title={"CSS3"}/>
                             <Skill iconId={'js'} title={"JavaScript"}/>
                             <Skill iconId={'bootstrap'} title={"Bootstrap"}/>
-                            <Icon   iconId={'ring'} />
-                            <Icon
-                                // viewBox={'0 0 40 40'} width="40" height="40"
-                                iconId={'test1'} />
-                            <img src={ring} alt="ring"/>
+                            {/*<Icon   iconId={'ring'} />*/}
+                            {/*<Icon*/}
+                            {/*    // viewBox={'0 0 40 40'} width="40" height="40"*/}
+                            {/*    iconId={'test1'} />*/}
+                            {/*<img src={ring} alt="ring"/>*/}
                         </SkillsWrapper>
-                </div>
-                <Photo src={skills} alt="Skills"/>
-            </FlexWrapper>
+                    </div>
+                    <Photo src={skills} alt="Skills"/>
+                </FlexWrapper>
+            </Container>
+
         </StyledSkills>
     );
 };
@@ -49,6 +50,10 @@ const Photo = styled.img`
 const SkillsWrapper = styled.div`
     display: flex;
     flex-direction: row;
+`
+const SkillsText = styled.span`
+    color: ${theme.colors.secondaryFont}
+    
 `
 
 

@@ -26,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         //color: ${theme.colors.light}
+        cursor: pointer;
     }
     
     ul {

@@ -13,17 +13,17 @@ export const Project = (props: ProjectProps) => {
         <StyledProject>
             <Image src={props.src} alt=""/>
 
-            {/*<InfoWrapper>*/}
-            {/*    <TextWrapper>*/}
+            <InfoWrapper>
+                <TextWrapper>
                     <Text>{props.text}</Text>
-                {/*</TextWrapper>*/}
+                </TextWrapper>
 
                 <ButtonWrapper>
                     <LinkButton type={"button"}>
                         <a href={"#"}>Learn More</a>
                     </LinkButton>
                 </ButtonWrapper>
-            {/*</InfoWrapper>*/}
+            </InfoWrapper>
 
 
         </StyledProject>
@@ -36,8 +36,10 @@ const StyledProject = styled.div`
     margin: 30px 10px 24px 10px;
     height: 434px;
     text-align: center;
-    
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    //position: relative;
 `
 
 const Image = styled.img`
@@ -45,36 +47,42 @@ const Image = styled.img`
     height: 276px;
     object-fit: cover;`
 
-const TextWrapper = styled.div``
+const TextWrapper = styled.div`
+margin-top: 20px;
+`
 
 const InfoWrapper = styled.div`
 display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    height: inherit;
     
 `
 
 const ButtonWrapper = styled.div`
-    display: block;
-    position: absolute;
-    bottom: 20px;
-    left: 33%;
+        //display: block;
+    //position: absolute;
+    //bottom: 20px;
+    //left: 33%;
 `
 
 const Text = styled.span`
     font-size: 16px;
-    font-weight: 400;
-    //opacity: 0.87;
+    
     
 `
 
-const LinkButton = styled.button`
-    background: ${theme.colors.darkBg};
+const LinkButton = styled(Button)`
+    background-color: ${theme.colors.darkBg};
     width: 130px;
     height: 42px;
     border: ${theme.colors.light} solid 2px;
+    font-size: 14px;
+    font-weight: 500;
+        
     
     & a {
-        color: ${theme.colors.light}
+        color: ${theme.colors.light}        
     }
+    
 `

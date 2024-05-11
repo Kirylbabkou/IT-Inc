@@ -6,6 +6,8 @@ import {SectionTitle} from "../../../components/SectionTitle";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {Icon} from "../../../components/icon/Icon";
+import {Button} from "../../../components/Button";
+import sendImg from "../../../assets/img/send.svg"
 
 export const Contact = () => {
     return (
@@ -17,7 +19,7 @@ export const Contact = () => {
                     <StyledForm>
                         <Field placeholder="Enter email address" name="e-mail" type="email" />
                         <Field as={'textarea'} name={'textarea'} placeholder="Enter message..."/>
-                        <ButtonForm type={'submit'}>Send Message <Icon iconId={'send'}/> </ButtonForm>
+                        <ButtonForm type={'submit'}>Send Message <img src={sendImg} alt={''}/> {/*<Icon iconId={'send'}/>*/} </ButtonForm>
                     </StyledForm>
                 </FlexWrapper>
             </Container>
@@ -65,14 +67,15 @@ const Field = styled.input`
         outline: 1px solid rgba(0, 0, 0, 0.12);
     }      
 `
-const ButtonForm = styled.button`
+const ButtonForm = styled(Button)`
     background-color: ${theme.colors.secondary};
-    border-radius: 4px;
     padding: 12px 24px;
     width: 213px;
-    height: 50px;
-    font-weight: 400;
-    font-size: 18px;
+    height: 50px;    
     text-align: center;
-    border: none;    
+    
+    & img {
+        margin: 0 0 -5px 10px;        
+    } 
+        
 `

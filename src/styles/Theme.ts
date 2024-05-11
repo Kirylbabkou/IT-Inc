@@ -6,7 +6,8 @@ export const theme = {
         accent: '#E84949',
         light: '#FFFFFF',
         lightOpacity: 'rgba(255, 255, 255, 0.87)',
-        secondaryFont: '#818080'
+        secondaryFont: '#818080',
+        darkFont: '#000000'
 
     }
 }

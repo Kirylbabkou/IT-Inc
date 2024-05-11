@@ -18,13 +18,13 @@ export const Main2 = () => {
                         <MainTitle>Software Developer</MainTitle>
                         <MainSpan>I’m <b>Kirill Bobkov</b>, a developer dedicated to making the world a better place one line of code at a time.</MainSpan>
                         <div>
-                            <Button>Hire me</Button>
+                            <MainButton>Hire me</MainButton>
                         </div>
                     </BlockInfo>
                     <PhotoWrapper>
                         {/*<span>*/}
                         <Icon id={'ring'} width="22" height="22" viewBox="0 0 22 22" iconId={"ring"}/>
-                        {/*<span id={'ring'}><Icon width="22" height="22"                                                 viewBox="0 0 22 22" iconId={"ring"}/></span>*/}
+                        {/*<span id={'ring'}><Icon width="22" height="22" viewBox="0 0 22 22" iconId={"ring"}/></span>*/}
                         <Icon id={'zigzag'} width="38" height="98" viewBox="0 0 43 98" iconId={"zigzag"}/>
                         <Icon id={'plus'} width="27" height="27" viewBox="0 0 27 27" iconId={"plus"}/>
                         <Icon id={'cube'} width="40" height="40" viewBox="0 0 40 40" iconId={"cube"}/>
@@ -40,10 +40,10 @@ export const Main2 = () => {
 };
 
 const StyledMain = styled.section`
-min-height: 495px;  
+    min-height: 495px;  
     color: ${theme.colors.secondary};    
     display: flex;    
-    margin: 50px 0 100px 0;    
+    margin: 50px 0 100px 0; 
 `
 
 const PhotoWrapper = styled.div`
@@ -113,6 +113,16 @@ const MainSpanTitle = styled.span`
     font-size: 32px;
     font-weight: 600;
     line-height: 38px;
+`
+
+const MainButton = styled(Button)`
+    background-color: ${theme.colors.accent};
+    width: 98px;
+    height: 42px;
+    padding: 8px 16px 8px 16px;    
+    //line-height: 1.5;
+    
+    margin-top: 30px;
 `
 
 

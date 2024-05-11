@@ -32,7 +32,7 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-min-height: 450px;
+    min-height: 450px;
     background-color: ${theme.colors.secondary};
     color: ${theme.colors.lightOpacity};    
     margin-top: 70px;
@@ -40,6 +40,6 @@ min-height: 450px;
 `
 
 const ProjectText = styled.span`
-    //margin-top: 30px;
+    line-height: 50px;
 `
 

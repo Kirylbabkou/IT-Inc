@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../icon/Icon";
+import {theme} from "../../styles/Theme";
 
 
 export const Menu = (props: {menuItems: Array<string>}) => {
@@ -22,9 +23,22 @@ const StyledMenu = styled.nav`
         display: flex;
         justify-content: space-between;
         gap: 30px;
-        text-align: center
+        text-align: center;
+        font-size: 18px;
+        color: ${theme.colors.secondaryFont};
+        height: 26px;
     }
     li {
         margin-left: 30px;
+        
+        & svg {
+            margin-bottom: -12px;
+            //stroke: ${theme.colors.darkBg}
+            
+    }
+    }
+    
+    a {
+        color: ${theme.colors.darkFont}
     }
 `

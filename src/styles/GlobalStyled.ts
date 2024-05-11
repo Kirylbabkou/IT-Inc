@@ -23,7 +23,8 @@ export const GlobalStyle = createGlobalStyle`
         line-height: 1.2 ;
     }
     
-    a {
+    a,
+    a:visited{
         text-decoration: none;
         //color: ${theme.colors.light}
         cursor: pointer;

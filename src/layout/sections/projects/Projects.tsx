@@ -16,17 +16,14 @@ export const Projects = () => {
     return (
         <StyledProjects>
             <Container>
-                <SectionTitle><Icon iconId={'projectsSvg'} />Projects</SectionTitle>
+                <SectionTitle><Icon iconId={'projectsWhite'} />Projects</SectionTitle>
                 <ProjectText>A select number of projects</ProjectText>
                 <FlexWrapper wrap="wrap" justifyContent="space-around">
                     <Project src={project1Img} text={"Made a social media manager template using HTML 5, CSS and JS."}/>
                     <Project src={project2Img} text={"Made a simple card page using HTML 5 and  CSS 3"}/>
                     <Project src={project3Img} text={"Made an I.P address tracking website."}/>
-
                 </FlexWrapper>
             </Container>
-
-
         </StyledProjects>
     );
 };

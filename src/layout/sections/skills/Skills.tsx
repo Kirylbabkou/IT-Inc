@@ -14,7 +14,7 @@ export const Skills = () => {
         <StyledSkills>
             <Container style={{ background: `${theme.colors.light}` }}>
                 <SectionTitle>Skills</SectionTitle>
-                <FlexWrapper wrap="wrap" alignItems="center" justifyContent="space-between">
+                <FlexWrapper alignItems="center" justifyContent="space-around"  wrap="wrap-reverse">
                     <div>
                         <SkillsText>I have a vast experience in the following web technologies:</SkillsText>
                         <SkillsWrapper>

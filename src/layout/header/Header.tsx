@@ -13,8 +13,8 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <FlexWrapper justifyContent="space-between" alignItems="center" >
-                <Logo/>
-                <Menu menuItems={items}/>
+                    <Logo/>
+                    <Menu menuItems={items}/>
                 </FlexWrapper>
             </Container>
 
@@ -25,13 +25,16 @@ export const Header = () => {
 const StyledHeader = styled.header`
     
     padding: 24px 20px 24px 20px;
-    box-shadow: 0px 1px 3px 0px #00000033;
-    box-shadow: 0px 2px 1px 0px #0000001F;
-    box-shadow: 0px 1px 1px 0px #00000024;
+    box-shadow: 0 1px 3px 0 #00000033;
     background-color: ${theme.colors.light};
     position: sticky;
     top: 0; left: 0; right: 0;
     z-index: 99999;
-    
+
+    @media ${theme.media.tablet} {
+        div > div:first-child >svg {
+            display: none;
+        }
+    }  
 `
 

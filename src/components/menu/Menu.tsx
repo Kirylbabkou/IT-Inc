@@ -10,7 +10,8 @@ export const Menu = (props: {menuItems: Array<string>}) => {
                 <ul>
                     {props.menuItems.map((item, index) => {
                         // if (item === "Projects") {return (<><Icon iconId={'projectsSvg'} /><li key={index}><a href="">{item}</a></li></>)}
-                        if (item === "Projects") {return (<li key={index}><a href=""><Icon iconId={'projectsSvg'} />{item}</a></li>)}
+                        if (item === "Projects")
+                        {return (<li key={index}><a href=""><Icon iconId={'projectsSvg'} />{item}</a></li>)}
                         else return (<li key={index}><a href="">{item}</a></li>)
                     })}
                 </ul>
@@ -27,15 +28,23 @@ const StyledMenu = styled.nav`
         font-size: 18px;
         color: ${theme.colors.secondaryFont};
         height: 26px;
+        
+        li:nth-child(2) > a {
+            color: ${theme.colors.accent};
+        }
+        
+        @media ${theme.media.tablet} {
+            display: none;
+        }
     }
     li {
         margin-left: 30px;
+        white-space: nowrap;
         
         & svg {
             margin-bottom: -12px;
-            //stroke: ${theme.colors.darkBg}
-            
-    }
+            //stroke: ${theme.colors.darkBg}            
+        }         
     }
     
     a {

@@ -8,6 +8,11 @@ export const theme = {
         lightOpacity: 'rgba(255, 255, 255, 0.87)',
         secondaryFont: '#818080',
         darkFont: '#000000'
+    },
 
+    media: {
+        tablet: "screen and (max-width: 768px)",
+        mobile: "screen and (max-width: 576px)",
     }
 }
+

@@ -12,7 +12,7 @@ export const Main2 = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper  alignItems="center" justifyContent="space-around" wrap={"wrap-reverse"}>
+                <FlexWrapper  alignItems="center" justifyContent="space-around" wrap="wrap-reverse">
                     <BlockInfo>
                         <MainSpanTitle>Hi👋, I’m a</MainSpanTitle>
                         <MainTitle>Software Developer</MainTitle>
@@ -56,13 +56,13 @@ const PhotoWrapper = styled.div`
         z-index: 1;
         position: absolute;
         bottom: 0;
-        left: 20px; 
+        left: 46px; 
     }
     #zigzag {
         z-index: 1;
         position: absolute;
         top: -20px;
-        left: 0;
+        left: 34px;
     }
     #plus {
         z-index: 1;
@@ -74,23 +74,23 @@ const PhotoWrapper = styled.div`
         z-index: 1;
         position: absolute;
         top: -38px;
-        right: -30px;
+        right: 0;
     }    
     #circles {
         z-index: 1;
         position: absolute;
         bottom: -34px;
-        left: 284px;
+        left: 268px;
     }
 `
 
 const Photo = styled.img`
-    width: 344px;
-    height: 389px;
+    width: 296px;
+    height: 384px;
     object-fit: cover;
     position: absolute;
     bottom: 26px;
-    right: 0;
+    right: 16px;
     z-index: 0;   
 `
 const BlockInfo = styled.div`

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Button} from "../../../../components/Button";
 import {theme} from "../../../../styles/Theme";
+import {Icon} from "../../../../components/icon/Icon";
 
 type ProjectProps = {
     text: string;
@@ -12,20 +13,16 @@ export const Project = (props: ProjectProps) => {
     return (
         <StyledProject>
             <Image src={props.src} alt=""/>
-
             <InfoWrapper>
                 <TextWrapper>
                     <Text>{props.text}</Text>
                 </TextWrapper>
-
                 <ButtonWrapper>
                     <LinkButton type={"button"}>
-                        <a href={"#"}>Learn More</a>
+                        <a href={"#"}>Learn More<Icon iconId='vector' width="15" height="9" viewBox="0 0 15 9" /></a>
                     </LinkButton>
                 </ButtonWrapper>
             </InfoWrapper>
-
-
         </StyledProject>
     );
 };
@@ -45,18 +42,18 @@ const StyledProject = styled.div`
 const Image = styled.img`
     width: 100%;
     height: 276px;
-    object-fit: cover;`
+    object-fit: cover;
+`
 
 const TextWrapper = styled.div`
-margin-top: 20px;
+    margin-top: 20px;
 `
 
 const InfoWrapper = styled.div`
-display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: inherit;
-    
+    height: inherit;    
 `
 
 const ButtonWrapper = styled.div`
@@ -68,8 +65,6 @@ const ButtonWrapper = styled.div`
 
 const Text = styled.span`
     font-size: 16px;
-    
-    
 `
 
 const LinkButton = styled(Button)`
@@ -78,11 +73,13 @@ const LinkButton = styled(Button)`
     height: 42px;
     border: ${theme.colors.light} solid 2px;
     font-size: 14px;
-    font-weight: 500;
-        
+    font-weight: 500;        
     
     & a {
-        color: ${theme.colors.light}        
-    }
-    
+        color: ${theme.colors.light};        
+        
+        & svg {
+            margin-left: 6px;
+        }
+    }    
 `

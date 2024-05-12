@@ -7,6 +7,7 @@ export const SectionTitle = styled.h2`
     
     & svg {
         margin-bottom: -12px;
+        margin-right: 12px;
     }
     
 `

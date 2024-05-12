@@ -11,7 +11,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             {/*<Container >*/}
-                <FlexWrapper justifyContent="space-around" alignItems="center">
+                <FlexWrapper justifyContent="space-around" alignItems="center" wrap="wrap">
                     <SocialLinkListWrapper>
                         <FooterText>My social media links:</FooterText>
                         <SocialLinkList>
@@ -21,9 +21,9 @@ export const Footer = () => {
                                 </SocialIconLink>
                             </SocialIconItem>
                             <SocialIconItem>
-                                {/*<SocialIconLink>*/}
-                                <Icon iconId="linkedin"/>
-                                {/*</SocialIconLink>*/}
+                                <SocialIconLink>
+                                    <Icon iconId="linkedin"/>
+                                </SocialIconLink>
                             </SocialIconItem>
                             <SocialIconItem>
                                 <SocialIconLink>
@@ -37,16 +37,15 @@ export const Footer = () => {
                             </SocialIconItem>
                         </SocialLinkList>
                     </SocialLinkListWrapper>
-                    {/*<div>*/}
+
                     <ProjectLink>
-                            <FooterText>More projects I’ve worked on</FooterText>
-                        
-                            <SocialIconLink>
-                                <Icon iconId="github" />
-                                <ContactGitText>@john-doe on github</ContactGitText>
-                            </SocialIconLink>
-                        </ProjectLink>
-                    {/*</div>*/}
+                        <FooterText>More projects I’ve worked on</FooterText>
+                        <SocialIconLink>
+                            <Icon iconId="github" />
+                            <ContactGitText>@john-doe on github</ContactGitText>
+                        </SocialIconLink>
+                    </ProjectLink>
+
 
                 </FlexWrapper>
             {/*</Container>*/}

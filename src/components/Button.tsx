@@ -5,4 +5,5 @@ export const Button = styled.button`
     font-family: "Be Vietnam Pro", sans-serif;
     border: none;
     font-size: 18px;
+    //cursor: pointer;
 `

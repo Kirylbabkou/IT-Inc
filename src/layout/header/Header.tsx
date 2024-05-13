@@ -5,6 +5,7 @@ import {Menu} from "../../components/menu/Menu";
 import {theme} from "../../styles/Theme";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {BurgerMenu} from "../../components/menu/BurgerMenu";
 
 const items = ["Skills", "Projects", "Contact me"]
 
@@ -15,6 +16,7 @@ export const Header = () => {
                 <FlexWrapper justifyContent="space-between" alignItems="center" >
                     <Logo/>
                     <Menu menuItems={items}/>
+                    {/*<BurgerMenu menuItems={items} />*/}
                 </FlexWrapper>
             </Container>
 
@@ -32,6 +34,7 @@ const StyledHeader = styled.header`
     z-index: 99999;
 
     @media ${theme.media.tablet} {
+        
         div > div:first-child >svg {
             display: none;
         }

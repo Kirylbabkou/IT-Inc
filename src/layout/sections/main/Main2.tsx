@@ -51,6 +51,8 @@ const PhotoWrapper = styled.div`
     width: 384px;
     height: 420px;
     z-index: -1;
+        
+    
     
     #ring {
         z-index: 1;
@@ -82,6 +84,40 @@ const PhotoWrapper = styled.div`
         bottom: -34px;
         left: 268px;
     }
+
+    @media ${theme.media.mobile} {
+        width: 360px;
+        height: 400px;
+
+        //& svg {
+        //    width: 18px;
+        //    height: 18px;
+        //}
+        #ring {
+            width: 18px;
+            height: 18px;
+            bottom: 0;
+            left: 84px;
+        }
+        #zigzag {
+
+            top: -20px;
+            left: 34px;
+        }
+        #plus {
+            top: -38px;
+            left: 156px;
+        }
+        #cube {
+            top: -38px;
+            right: 0;
+        }
+        #circles {
+            bottom: -34px;
+            left: 268px;
+        }
+
+    }
 `
 
 const Photo = styled.img`
@@ -91,10 +127,14 @@ const Photo = styled.img`
     position: absolute;
     bottom: 26px;
     right: 16px;
-    z-index: 0;   
+    z-index: 0;
+        @media ${theme.media.mobile} {
+            width: 234px;
+            height: 288px;
+        }
 `
 const BlockInfo = styled.div`
-max-width: 46%;
+    width: 46%;
 `
 
 const MainTitle = styled.h1`
@@ -103,6 +143,10 @@ const MainTitle = styled.h1`
     //line-height: 58px;
     text-align: left;
     margin-bottom: 24px;
+    
+        @media ${theme.media.mobile} {
+            
+        }
 `
 const MainSpan = styled.span`  
     // color: ${theme.colors.secondaryFont};

@@ -8,10 +8,10 @@ import {Button} from "../Button";
 export const BurgerMenu = (props: {menuItems: Array<string>}) => {
     return (
             <StyledBurgerMenu>
-                <BurgerButton isOpen={true}>
+                <BurgerButton isOpen={false}>
                     <span></span>
                 </BurgerButton>
-                <BurgerMenuPopup isOpen={true}>
+                <BurgerMenuPopup isOpen={false}>
                     <ul>
                         {props.menuItems.map((item, index) => {
                             if (item === "Projects") {

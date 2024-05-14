@@ -1,6 +1,5 @@
 import {createGlobalStyle} from "styled-components";
 import {theme} from "./Theme";
-import {SectionTitle} from "../components/SectionTitle";
 
 
 export const GlobalStyle = createGlobalStyle`

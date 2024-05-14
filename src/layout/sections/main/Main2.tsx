@@ -6,13 +6,16 @@ import {Button} from "../../../components/Button";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {Icon} from "../../../components/icon/Icon";
+import {font} from "../../../styles/Common";
 
 
 export const Main2 = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper  alignItems="center" justifyContent="space-around" wrap="wrap-reverse">
+                <FlexWrapper  alignItems="center" justifyContent="space-around"
+                              wrap="wrap-reverse"
+                >
                     <BlockInfo>
                         <MainSpanTitle>Hi👋, I’m a</MainSpanTitle>
                         <MainTitle>Software Developer</MainTitle>
@@ -22,14 +25,13 @@ export const Main2 = () => {
                         </div>
                     </BlockInfo>
                     <PhotoWrapper>
-                        {/*<span>*/}
                         <Icon id={'ring'} width="22" height="22" viewBox="0 0 22 22" iconId={"ring"}/>
                         {/*<span id={'ring'}><Icon width="22" height="22" viewBox="0 0 22 22" iconId={"ring"}/></span>*/}
                         <Icon id={'zigzag'} width="38" height="98" viewBox="0 0 43 98" iconId={"zigzag"}/>
                         <Icon id={'plus'} width="27" height="27" viewBox="0 0 27 27" iconId={"plus"}/>
                         <Icon id={'cube'} width="40" height="40" viewBox="0 0 40 40" iconId={"cube"}/>
                         <Icon id={'circles'} width="120" height="76" viewBox="0 0 120 76" iconId={"circles"}/>
-                        {/*</span>*/}
+
                         <Photo src={photo} alt=""/>
                     </PhotoWrapper>
                 </FlexWrapper>
@@ -43,16 +45,20 @@ const StyledMain = styled.section`
     min-height: 495px;  
     color: ${theme.colors.secondary};    
     display: flex;    
-    margin: 50px 0 100px 0; 
+    margin: 50px 0 100px 0;
+
+    & div > div {
+        @media ${theme.media.tablet} {        
+            flex-direction: column-reverse;       
+        }
+    }
 `
 
 const PhotoWrapper = styled.div`
   position: relative;
     width: 384px;
     height: 420px;
-    z-index: -1;
-        
-    
+    z-index: -1;  
     
     #ring {
         z-index: 1;
@@ -86,37 +92,44 @@ const PhotoWrapper = styled.div`
     }
 
     @media ${theme.media.mobile} {
-        width: 360px;
-        height: 400px;
+        width: 260px;
+        height: 300px;
 
         //& svg {
         //    width: 18px;
         //    height: 18px;
         //}
         #ring {
-            width: 18px;
-            height: 18px;
-            bottom: 0;
-            left: 84px;
+            width: 14px;
+            height: 14px;
+            bottom: -10px;
+            left: 8px;
         }
         #zigzag {
-
+            width: 23px;
+            height: 60px;
             top: -20px;
-            left: 34px;
+            left: -10px;
         }
         #plus {
-            top: -38px;
-            left: 156px;
+            width: 15px;
+            height: 16px;
+            top: -34px;
+            left: 112px;
+            transform: rotate(-15deg);
         }
         #cube {
-            top: -38px;
-            right: 0;
+            width: 24px;
+            height: 24px;
+            top: -32px;
+            right: -14px;
         }
         #circles {
-            bottom: -34px;
-            left: 268px;
+            width: 105px;
+            height: 65px;
+            bottom: -32px;
+            left: 182px;
         }
-
     }
 `
 
@@ -131,42 +144,44 @@ const Photo = styled.img`
         @media ${theme.media.mobile} {
             width: 234px;
             height: 288px;
+            bottom: 12px;
+            right: 0;
         }
 `
 const BlockInfo = styled.div`
     width: 46%;
+    @media ${theme.media.tablet} {
+        width: 100%;
+        margin-top: 50px;
+    }
 `
 
+const MainSpanTitle = styled.span`    
+    //font-size: 32px;
+    //font-weight: 600;
+    //line-height: 38px;
+    ${font({weight: 600, Fmax: 32, Fmin: 22})}
+`
 const MainTitle = styled.h1`
-    font-size: 48px;
-    font-weight: 600;
-    //line-height: 58px;
+    ${font({weight: 600, Fmax: 48, Fmin: 29})}
     text-align: left;
     margin-bottom: 24px;
-    
-        @media ${theme.media.mobile} {
-            
-        }
 `
-const MainSpan = styled.span`  
-    // color: ${theme.colors.secondaryFont};
+const MainSpan = styled.span` 
     color: rgba(0,0,0,0.7)
-`
-const MainSpanTitle = styled.span`
-    
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 38px;
 `
 
 const MainButton = styled(Button)`
     background-color: ${theme.colors.accent};
     width: 98px;
     height: 42px;
-    padding: 8px 16px 8px 16px;    
-    //line-height: 1.5;
-    
+    padding: 8px 16px 8px 16px; 
     margin-top: 30px;
+
+    @media ${theme.media.tablet} {
+        width: 114px;
+        height: 48px;
+    }
 `
 
 

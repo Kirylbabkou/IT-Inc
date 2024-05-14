@@ -26,4 +26,6 @@ margin-right: 30px;
 height: 102px;
 width: 75px;`
 
-const SkillTitle = styled.span``
+const SkillTitle = styled.span`
+font-size: 16px;
+`

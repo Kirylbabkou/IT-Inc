@@ -12,10 +12,10 @@ import {theme} from "../../../styles/Theme"
 export const Skills = () => {
     return (
         <StyledSkills>
-            <Container style={{ background: `${theme.colors.light}` }}>
+            <Container style= {{background: `${theme.colors.light}`}}>
                 <SectionTitle>Skills</SectionTitle>
                 <FlexWrapper alignItems="center" justifyContent="space-around"  wrap="wrap-reverse">
-                    <div>
+                    <SkillsInfo>
                         <SkillsText>I have a vast experience in the following web technologies:</SkillsText>
                         <SkillsWrapper>
                             <Skill  iconId={'html'} title={"HTML 5"}/>
@@ -28,7 +28,7 @@ export const Skills = () => {
                             {/*    iconId={'test1'} />*/}
                             {/*<img src={ring} alt="ring"/>*/}
                         </SkillsWrapper>
-                    </div>
+                    </SkillsInfo>
                     <Photo src={skills} alt="Skills"/>
                 </FlexWrapper>
             </Container>
@@ -39,20 +39,44 @@ export const Skills = () => {
 
 const StyledSkills = styled.section`
     min-height: 450px;
-    background: #F7F6FB;
+    background-color: ${theme.colors.primaryBg};
 `
 
 const Photo = styled.img`
-    width: 344px;
-    height: 389px;
-    object-fit: cover;
+    //width: 344px;
+    width: calc(250px + (344 - 250) * ((100vw - 360px ) / (1440 - 360)));
+    //height: 389px;
+    height: calc(186px + (389 - 186) * ((100vw - 360px ) / (1440 - 360)));
+    object-fit: cover; 
 `
+
+const SkillsInfo = styled.div`
+    margin-top: 40px;
+`
+
 const SkillsWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
+    //display: flex;
+    //flex-direction: row;
+    //flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(75px, 130px)); 
+    gap: 42px;
+    
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+   
+    margin-top: 40px;
+    
+        @media ${theme.media.mobile} {
+            grid-template-columns: repeat(2, minmax(75px, 130px));
+            grid-template-rows: repeat(2, minmax(55px, 150px));
+        }
 `
 const SkillsText = styled.span`
     color: ${theme.colors.secondaryFont}
+    
     
 `
 

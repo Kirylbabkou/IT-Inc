@@ -12,7 +12,7 @@ import {theme} from "../../../styles/Theme"
 export const Skills = () => {
     return (
         <StyledSkills>
-            <Container style= {{background: `${theme.colors.light}`}}>
+            <Container >
                 <SectionTitle>Skills</SectionTitle>
                 <FlexWrapper alignItems="center" justifyContent="space-around"  wrap="wrap-reverse">
                     <SkillsInfo>
@@ -40,6 +40,10 @@ export const Skills = () => {
 const StyledSkills = styled.section`
     min-height: 450px;
     background-color: ${theme.colors.primaryBg};
+    
+    & ${Container} {
+        background-color: ${theme.colors.light};:
+    }
 `
 
 const Photo = styled.img`

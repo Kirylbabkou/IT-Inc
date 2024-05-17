@@ -36,7 +36,6 @@ export const Main2 = () => {
                     </PhotoWrapper>
                 </FlexWrapper>
             </Container>
-
         </StyledMain>
     );
 };
@@ -95,10 +94,6 @@ const PhotoWrapper = styled.div`
         width: 260px;
         height: 300px;
 
-        //& svg {
-        //    width: 18px;
-        //    height: 18px;
-        //}
         #ring {
             width: 14px;
             height: 14px;
@@ -157,9 +152,6 @@ const BlockInfo = styled.div`
 `
 
 const MainSpanTitle = styled.span`    
-    //font-size: 32px;
-    //font-weight: 600;
-    //line-height: 38px;
     ${font({weight: 600, Fmax: 32, Fmin: 22})}
 `
 const MainTitle = styled.h1`

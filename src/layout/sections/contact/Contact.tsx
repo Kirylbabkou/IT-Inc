@@ -34,7 +34,7 @@ const StyledContact = styled.section`
 
 const Photo = styled.img`
     max-width: 563px;
-    //min-height: 389px;
+    width: 100%;    
     object-fit: cover;
     margin: 10px    
 `

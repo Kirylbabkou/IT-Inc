@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Button} from "../../../../components/Button";
 import {theme} from "../../../../styles/Theme";
 import {Icon} from "../../../../components/icon/Icon";
+import {font, height, width} from "../../../../styles/Common";
 
 type ProjectProps = {
     text: string;
@@ -29,24 +30,24 @@ export const Project = (props: ProjectProps) => {
 
 const StyledProject = styled.div`
     background-color: ${theme.colors.darkBg};
-    max-width: 372px;
+    width: min-content;
     margin: 30px 10px 24px 10px;
-    height: 434px;
+    ${height( 434,  327)};
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    //position: relative;
+    justify-content: space-between;    
+    
 `
 
 const Image = styled.img`
-    width: 100%;
-    height: 276px;
+    ${width( 372,  266)};      
+    ${height( 276,  166)};
     object-fit: cover;
 `
 
 const TextWrapper = styled.div`
-    margin-top: 20px;
+    margin: 20px 10px 0;
 `
 
 const InfoWrapper = styled.div`
@@ -57,14 +58,11 @@ const InfoWrapper = styled.div`
 `
 
 const ButtonWrapper = styled.div`
-        //display: block;
-    //position: absolute;
-    //bottom: 20px;
-    //left: 33%;
+        
 `
 
 const Text = styled.span`
-    font-size: 16px;
+   ${font({lineHeight: 1.8, Fmax: 16, Fmin: 14})}
 `
 
 const LinkButton = styled(Button)`

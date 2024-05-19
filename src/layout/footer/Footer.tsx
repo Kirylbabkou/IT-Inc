@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
-import github from "../../assets/img/icons-sprite.svg"
 import bgImg from "../../assets/img/bgImgWave.png"
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {theme} from "../../styles/Theme";
+import {font} from "../../styles/Common";
 
 export const Footer = () => {
     return (
         <StyledFooter>
-            {/*<Container >*/}
+            <Container >
                 <FlexWrapper justifyContent="space-around" alignItems="center" wrap="wrap">
                     <SocialLinkListWrapper>
                         <FooterText>My social media links:</FooterText>
@@ -46,10 +46,8 @@ export const Footer = () => {
                         </SocialIconLink>
                     </ProjectLink>
 
-
                 </FlexWrapper>
-            {/*</Container>*/}
-
+            </Container>
         </StyledFooter>
     );
 };
@@ -61,19 +59,35 @@ const StyledFooter = styled.footer`
     min-height: 360px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-//    display: flex;
-//    justify-content: space-between;//    
     color: ${theme.colors.light};
+
+    @media ${theme.media.tablet} {
+        min-height: 260px;
+    }
+    
+     ${FlexWrapper} {
+    @media ${theme.media.tablet} {
+        justify-content: start;
+    }         
+}
 `
 const SocialLinkListWrapper = styled.div`
+    margin-right: 50px;        
+    
+        @media ${theme.media.tablet} {
+            margin-top: 30px;
+        }    
 `
 
 const FooterText = styled.span`    
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 29.22px;
+    ${font({weight: 500, lineHeight: 1.8, Fmax: 20, Fmin: 18})}
     text-align: center;
     margin:  0 0 34px 0;
+
+    @media ${theme.media.tablet} {
+        margin-bottom: 12px;
+        font-weight: 400;
+    }
 `
 
 const SocialLinkList = styled.ul`
@@ -81,16 +95,28 @@ const SocialLinkList = styled.ul`
     align-items: center;
     margin: 34px 0 0 0;
     li:not(:first-child) {
-        margin-left: 65px;
+        margin-left: 60px;
     }
+    
+        @media ${theme.media.tablet} {
+            margin-top: 12px;
+        }
 `
 
 const SocialIconItem = styled.li``
 
 const ProjectLink = styled.div`
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+
+        @media ${theme.media.tablet} {
+            margin-top: 28px;
+        }
+
+        @media ${theme.media.mobile} {
+            margin-top: 0;
+        }
 `
 
 const SocialIconLink = styled.a` 

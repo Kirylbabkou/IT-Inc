@@ -19,9 +19,9 @@ export const Skills = () => {
                         <SkillsText>I have a vast experience in the following web technologies:</SkillsText>
                         <SkillsWrapper>
                             <Skill  iconId={'html'} title={"HTML 5"}/>
-                            <Skill width={'44px'} viewBox={'0 0 44 44'} iconId={'css'} title={"CSS3"}/>
-                            <Skill iconId={'js'} title={"JavaScript"}/>
-                            <Skill iconId={'bootstrap'} title={"Bootstrap"}/>
+                            <Skill width={'44px'} viewBox={'19 10 44 49'} iconId={'css'} title={"CSS3"}/>
+                            <Skill iconId={'js'} title={"JavaScript"} viewBox={'0 0 38 38'}/>
+                            <Skill iconId={'bootstrap'} title={"Bootstrap"} viewBox={'19 10 44 49'}/>
                             {/*<Icon   iconId={'ring'} />*/}
                             {/*<Icon*/}
                             {/*    // viewBox={'0 0 40 40'} width="40" height="40"*/}
@@ -50,7 +50,7 @@ const Photo = styled.img`
     //width: 344px;
     width: calc(250px + (344 - 250) * ((100vw - 360px ) / (1440 - 360)));
     //height: 389px;
-    height: calc(186px + (389 - 186) * ((100vw - 360px ) / (1440 - 360)));
+    height: calc(204px + (389 - 204) * ((100vw - 360px ) / (1440 - 360)));
     object-fit: cover; 
 `
 
@@ -74,8 +74,13 @@ const SkillsWrapper = styled.div`
     margin-top: 40px;
     
         @media ${theme.media.mobile} {
-            grid-template-columns: repeat(2, minmax(75px, 130px));
-            grid-template-rows: repeat(2, minmax(55px, 150px));
+            grid-template-columns: repeat(2, minmax(75px, 220px));
+            grid-template-rows: repeat(2, minmax(55px, 118px));
+            
+            & svg {
+                width: 70px;
+                height: 74px;
+            }
         }
 `
 const SkillsText = styled.span`

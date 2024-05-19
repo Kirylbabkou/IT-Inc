@@ -8,6 +8,7 @@ import {theme} from "../../../styles/Theme";
 import {Icon} from "../../../components/icon/Icon";
 import {Button} from "../../../components/Button";
 import sendImg from "../../../assets/img/send.svg"
+import {width} from "../../../styles/Common";
 
 export const Contact = () => {
     return (
@@ -29,12 +30,17 @@ export const Contact = () => {
 
 const StyledContact = styled.section` 
     min-height: 450px;
-    margin: 100px 0 70px 0;        
+    margin: 100px 0 70px 0;
+
+    @media ${theme.media.tablet} {
+        margin: 54px 0 38px 0;
+    }
 `
 
 const Photo = styled.img`
-    max-width: 563px;
-    width: 100%;    
+    //max-width: 563px;
+    //width: 100%;  
+    ${width( 563,  250)};
     object-fit: cover;
     margin: 10px    
 `
@@ -45,6 +51,7 @@ const StyledForm = styled.form`
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    margin-top: 32px;
         
     textarea {
         resize: none;

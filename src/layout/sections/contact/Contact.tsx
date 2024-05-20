@@ -38,8 +38,7 @@ const StyledContact = styled.section`
 `
 
 const Photo = styled.img`
-    //max-width: 563px;
-    //width: 100%;  
+    max-width: 563px;
     ${width( 563,  250)};
     object-fit: cover;
     margin: 10px    

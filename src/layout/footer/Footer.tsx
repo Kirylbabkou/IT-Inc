@@ -2,6 +2,8 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "../../components/icon/Icon";
 import bgImg from "../../assets/img/bgImgWave.png"
+import bgImg2x from "../../assets/img/bgImgWave@2x.webp"
+import bgImg3x from "../../assets/img/bgImgWave@3x.webp"
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
 import {theme} from "../../styles/Theme";
@@ -53,13 +55,21 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-    background: url("${bgImg}");
+    background: url("${bgImg}");    
     background-size: cover;
     background-repeat: round;
     min-height: 360px;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    color: ${theme.colors.light};
+    color: ${theme.colors.light}; 
+    
+    @media (min-resolution: 2dppx) {
+        background-image: url("${bgImg2x}");
+    }
+
+    @media (min-resolution: 3dppx) {
+        background-image: url("${bgImg3x}");
+    }
 
     @media ${theme.media.tablet} {
         min-height: 260px;

@@ -8,6 +8,7 @@ import {Icon} from "../../../components/icon/Icon";
 import ring from "../../../assets/img/fotoDecor/ring.svg";
 import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme"
+import {height, width} from "../../../styles/Common";
 
 export const Skills = () => {
     return (
@@ -48,9 +49,11 @@ const StyledSkills = styled.section`
 
 const Photo = styled.img`
     //width: 344px;
-    width: calc(250px + (344 - 250) * ((100vw - 360px ) / (1440 - 360)));
+    //width: calc(250px + (344 - 250) * ((100vw - 360px ) / (1440 - 360)));
+    ${width( 388,  250)};
     //height: 389px;
-    height: calc(204px + (389 - 204) * ((100vw - 360px ) / (1440 - 360)));
+    //height: calc(204px + (389 - 204) * ((100vw - 360px ) / (1440 - 360)));
+    ${height( 389,  204)};
     object-fit: cover; 
 `
 

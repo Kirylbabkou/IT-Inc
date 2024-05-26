@@ -1,46 +1,10 @@
-import React from 'react';
 import styled from "styled-components";
-import photo from '../../../assets/img/photo.webp'
-import {FlexWrapper} from "../../../components/FlexWrapper";
-import {Button} from "../../../components/Button";
-import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
-import {Icon} from "../../../components/icon/Icon";
 import {font} from "../../../styles/Common";
+import {Button} from "../../../components/Button";
 
 
-export const Main2 = () => {
-    return (
-        <StyledMain>
-            <Container>
-                <FlexWrapper  alignItems="center" justifyContent="space-around"
-                              wrap="wrap-reverse"
-                >
-                    <BlockInfo>
-                        <MainSpanTitle>Hi👋, I’m a</MainSpanTitle>
-                        <MainTitle>Software Developer</MainTitle>
-                        <MainSpan>I’m <b>Kirill Bobkov</b>, a developer dedicated to making the world a better place one line of code at a time.</MainSpan>
-                        <div>
-                            <MainButton>Hire me</MainButton>
-                        </div>
-                    </BlockInfo>
-                    <PhotoWrapper>
-                        <Icon id={'ring'} width="22" height="22" viewBox="0 0 22 22" iconId={"ring"}/>
-                        {/*<span id={'ring'}><Icon width="22" height="22" viewBox="0 0 22 22" iconId={"ring"}/></span>*/}
-                        <Icon id={'zigzag'} width="38" height="98" viewBox="0 0 43 98" iconId={"zigzag"}/>
-                        <Icon id={'plus'} width="27" height="27" viewBox="0 0 27 27" iconId={"plus"}/>
-                        <Icon id={'cube'} width="40" height="40" viewBox="0 0 40 40" iconId={"cube"}/>
-                        <Icon id={'circles'} width="120" height="76" viewBox="0 0 120 76" iconId={"circles"}/>
-
-                        <Photo src={photo} alt=""/>
-                    </PhotoWrapper>
-                </FlexWrapper>
-            </Container>
-        </StyledMain>
-    );
-};
-
-const StyledMain = styled.section`
+const Main = styled.section`
     min-height: 495px;  
     color: ${theme.colors.secondary};    
     display: flex;    
@@ -176,5 +140,13 @@ const MainButton = styled(Button)`
     }
 `
 
-
-
+export const S = {
+    Main,
+    PhotoWrapper,
+    Photo,
+    BlockInfo,
+    MainSpanTitle,
+    MainButton,
+    MainTitle,
+    MainSpan
+}

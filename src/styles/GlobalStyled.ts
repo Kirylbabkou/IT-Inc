@@ -21,7 +21,6 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${theme.colors.primaryBg};
         line-height: 1.2 ;
         min-width: 360px;
-        border: solid 1px green;
     }
     
     a,

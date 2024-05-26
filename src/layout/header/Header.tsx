@@ -1,45 +1,34 @@
 import React from 'react';
-import styled from "styled-components";
+import {S} from './Header_Styles'
 import {Logo} from "../../components/logo/Logo";
-import {Menu} from "../../components/menu/Menu";
-import {theme} from "../../styles/Theme";
+import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu";
 import {Container} from "../../components/Container";
 import {FlexWrapper} from "../../components/FlexWrapper";
-import {BurgerMenu} from "../../components/menu/BurgerMenu";
+import {BurgerMenu} from "./headerMenu/burgerMenu/BurgerMenu";
 
 const items = ["Skills", "Projects", "Contact me"]
 
-export const Header = () => {
+export const Header: React.FC = () => {
+
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+
+    React.useEffect(() => {
+        window.addEventListener("resize", () => setWidth(window.innerWidth));
+    }, []);
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <FlexWrapper justifyContent="space-between" alignItems="center" >
-                    {/*<Logo/>*/}
-                    {/*<Menu menuItems={items}/>*/}
-                    <BurgerMenu menuItems={items} />
+                    <Logo/>
+                    {width < breakpoint
+                        ? <BurgerMenu menuItems={items} />
+                        : <DesktopMenu menuItems={items} />}
                 </FlexWrapper>
             </Container>
-
-        </StyledHeader>
+        </S.Header>
     );
 };
 
-const StyledHeader = styled.header`
-    display: flex;
-    //padding: 24px 20px 24px 20px;
-    padding: 24px 0 24px 0;
-    box-shadow: 0 1px 3px 0 #00000033;
-    background-color: ${theme.colors.light};
-    position: sticky;
-    top: 0; left: 0; right: 0;
-    z-index: 99999;
-    min-height: 72px;
-
-    @media ${theme.media.tablet} {
-        
-        div > div:first-child >svg {
-            display: none;
-        }
-    }  
-`
 

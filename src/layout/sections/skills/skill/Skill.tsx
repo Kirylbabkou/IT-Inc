@@ -1,6 +1,6 @@
 import React from 'react';
 import {Icon} from "../../../../components/icon/Icon";
-import styled from "styled-components";
+import {S} from "../Skills_Styles"
 
 type SkillPropsType = {
     width?: string
@@ -11,22 +11,10 @@ type SkillPropsType = {
 
 export const Skill = (props: SkillPropsType) => {
     return (
-        <StyledSkill>
+        <S.Skill>
             <Icon width={props.width || "44px"} viewBox={props.viewBox ||'0 0 44 44'} height={"44px"} iconId={props.iconId} />
-            <SkillTitle>{props.title}</SkillTitle>
-        </StyledSkill>
+            <S.SkillTitle>{props.title}</S.SkillTitle>
+        </S.Skill>
     );
 };
 
-const StyledSkill = styled.div`
-display: flex;
-flex-direction: column;
-gap: 16px;
-height: 102px;
-width: 75px;
-align-items: center;
-`
-
-const SkillTitle = styled.span`
-font-size: 16px;
-`

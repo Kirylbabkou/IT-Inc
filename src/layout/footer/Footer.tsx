@@ -9,6 +9,13 @@ import {FlexWrapper} from "../../components/FlexWrapper";
 import {theme} from "../../styles/Theme";
 import {font} from "../../styles/Common";
 
+const socialData = [
+    { iconId: "gmail" },
+    { iconId: "linkedin" },
+    { iconId: "twitter" },
+    { iconId: "whatsapp"}
+]
+
 export const Footer = () => {
     return (
         <StyledFooter>
@@ -17,26 +24,13 @@ export const Footer = () => {
                     <SocialLinkListWrapper>
                         <FooterText>My social media links:</FooterText>
                         <SocialLinkList>
-                            <SocialIconItem>
-                                <SocialIconLink>
-                                    <Icon iconId="gmail"/>
-                                </SocialIconLink>
-                            </SocialIconItem>
-                            <SocialIconItem>
-                                <SocialIconLink>
-                                    <Icon iconId="linkedin"/>
-                                </SocialIconLink>
-                            </SocialIconItem>
-                            <SocialIconItem>
-                                <SocialIconLink>
-                                    <Icon iconId="twitter"/>
-                                </SocialIconLink>
-                            </SocialIconItem>
-                            <SocialIconItem>
-                                <SocialIconLink>
-                                    <Icon iconId="whatsapp"/>
-                                </SocialIconLink>
-                            </SocialIconItem>
+                            {socialData.map((s, index) => (
+                                <SocialIconItem>
+                                    <SocialIconLink>
+                                        <Icon iconId={s.iconId}/>
+                                    </SocialIconLink>
+                                </SocialIconItem>
+                            ))}
                         </SocialLinkList>
                     </SocialLinkListWrapper>
 
